@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Một Tuần Calisthenics</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg,#000,#2a0000);
+    color:white;
+}
+
+header{
+    text-align:center;
+    padding:35px 20px;
+    border-bottom:3px solid red;
+}
+
+h1{
+    color:red;
+    font-size:38px;
+}
+
+nav{
+    text-align:center;
+    background:black;
+    padding:10px;
+    border-bottom:2px solid red;
+}
+
+nav button{
+    margin:5px;
+    padding:10px 18px;
+    font-weight:bold;
+    background:#8b0000;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+nav button:hover{
+    background:red;
+}
+
+.page{
+    display:none;
+    padding:30px 10px;
+}
+
+.active{
+    display:block;
+}
+
+.card{
+    max-width:900px;
+    margin:auto;
+    background:#111;
+    padding:25px;
+    border-radius:15px;
+    border:2px solid red;
+    text-align:center;
+}
+
+.card h2{
+    color:#ff4d4d;
+}
+
+iframe{
+    width:100%;
+    height:500px;
+    margin-top:20px;
+    border-radius:12px;
+}
+</style>
+
+<script>
+function showPage(id){
+    let pages=document.getElementsByClassName("page");
+    for(let i=0;i<pages.length;i++){
+        pages[i].classList.remove("active");
+    }
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+<body>
+
+<header>
+    <h1>💀 MỘT TUẦN CALISTHENICS 💪</h1>
+    <p>Discipline • Strength • Willpower</p>
+</header>
+
+<nav>
+    <button onclick="showPage('home')">Trang chủ</button>
+    <button onclick="showPage('d1')">Day 1</button>
+    <button onclick="showPage('d2')">Day 2</button>
+    <button onclick="showPage('d3')">Day 3</button>
+    <button onclick="showPage('d4')">Day 4</button>
+    <button onclick="showPage('d5')">Day 5</button>
+    <button onclick="showPage('sp')">Special</button>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="page active">
+<div class="card">
+<h2>GIỚI THIỆU</h2>
+<p>
+Trang web giúp bạn làm quen với các bài tập <b>calisthenics</b>
+từ cơ bản đến nâng cao trong vòng một tuần.
+</p>
+<p>
+<b>Lưu ý:</b> bạn nên có nền tảng gym hoặc calisthenics trước đó.
+</p>
+<p>
+Hãy tập theo từng ngày và cố gắng hoàn thành tiến trình.
+</p>
+<p style="color:red;font-size:22px;"><b>🔥 GOOD LUCK 🔥</b></p>
+</div>
+</div>
+
+<!-- DAY 1 -->
+<div id="d1" class="page">
+<div class="card">
+<h2>Day 1</h2>
+<video controls width="100%">
+    <source src="videos/day1p1.mp4" type="video/mp4">
+</video> 
+<video controls width="100%">
+    <source src="videos/day1p2.mp4" type="video/mp4">
+</video>
+<video controls width="100%">
+    <source src="videos/day1p3.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+<!-- DAY 2 -->
+<div id="d2" class="page">
+<div class="card">
+<h2>Day 2</h2>
+<video controls width="100%">
+    <source src="videos/day2.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+<!-- DAY 3 -->
+<div id="d3" class="page">
+<div class="card">
+<h2>Day 3</h2>
+<video controls width="100%">
+    <source src="videos/day3p1.mp4" type="video/mp4">
+</video>
+<video controls width="100%">
+    <source src="videos/day3p2.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+<!-- DAY 4 -->
+<div id="d4" class="page">
+<div class="card">
+<h2>Day 4</h2>
+<video controls width="100%">
+    <source src="videos/day4.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+<!-- DAY 5 -->
+<div id="d5" class="page">
+<div class="card">
+<h2>Day 5</h2>
+<video controls width="100%">
+    <source src="videos/day5.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+<!-- SPECIAL -->
+<div id="sp" class="page">
+<div class="card">
+<h2>🔥 SPECIAL 🔥</h2>
+<video controls width="100%">
+    <source src="videos/db.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+</body>
+</html>
