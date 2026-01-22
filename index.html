@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Một Tuần Calisthenics</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    margin: 0;
+    color: white;
+}
+
+header {
+    background: linear-gradient(90deg, #000, #8b0000);
+    text-align: center;
+    padding: 30px;
+    border-bottom: 3px solid red;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav {
+    background: black;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid red;
+}
+
+nav button {
+    margin: 5px;
+    padding: 8px 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    background: #8b0000;
+    color: white;
+    border: none;
+}
+nav button:hover {
+    background: red;
+}
+
+.page {
+    display: none;
+    padding: 30px;
+}
+
+.active {
+    display: block;
+}
+
+.card {
+    background: #111;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: auto;
+    border: 2px solid red;
+    text-align: center;
+}
+
+.card h2 {
+    color: #ff3b3b;
+}
+
+video {
+    width: 100%;
+    max-width: 700px;
+    margin: 15px auto;
+    border-radius: 12px;
+    border: 2px solid red;
+}
+
+.music-box {
+    text-align: center;
+    margin: 15px;
+}
+
+.music-box button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-weight: bold;
+    background: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.music-box button:hover {
+    background: red;
+}
+</style>
+
+<script>
+function showPage(id) {
+    let pages = document.getElementsByClassName("page");
+    for (let i = 0; i < pages.length; i++) {
+        pages[i].classList.remove("active");
+    }
+    document.getElementById(id).classList.add("active");
+}
+
+function playMusic() {
+    document.getElementById("bgm").play();
+}
+function pauseMusic() {
+    document.getElementById("bgm").pause();
+}
+</script>
+</head>
+
+<body>
+
+<!-- NHẠC NỀN -->
+<audio id="bgm" loop>
+    <source src="audio/musicgym.mp3" type="audio/mpeg">
+</audio>
+
+<header>
+<h1>💀💪 MỘT TUẦN CALISTHENICS 💪💀</h1>
+<p>Discipline • Strength • Willpower</p>
+</header>
+
+<div class="music-box">
+    <button onclick="playMusic()">🔊 Bật nhạc</button>
+    <button onclick="pauseMusic()">🔇 Tắt nhạc</button>
+</div>
+
+<nav>
+<button onclick="showPage('home')">Trang chủ</button>
+<button onclick="showPage('d1')">Day 1</button>
+<button onclick="showPage('d2')">Day 2</button>
+<button onclick="showPage('d3')">Day 3</button>
+<button onclick="showPage('d4')">Day 4</button>
+<button onclick="showPage('d5')">Day 5</button>
+<button onclick="showPage('sp')">Special</button>
+</nav>
+
+<div id="home" class="page active">
+<div class="card">
+<h2>GIỚI THIỆU</h2>
+<p>
+Đây là một trang web giúp bạn làm quen với các bài tập <b>calisthenics</b>
+từ cơ bản nhất trong vòng một tuần.
+</p>
+<p>
+<b>Lưu ý:</b> bạn cần có nền tảng cơ bản hoặc đã từng tập gym / calisthenics.
+</p>
+<p>
+Hãy chọn từng ngày và cố gắng hoàn thành tiến trình.
+</p>
+<p style="font-size:22px;color:#ff4d4d;">
+🔥 <b>GOOD LUCK!!</b> 🔥
+</p>
+</div>
+</div>
+
+<div id="d1" class="page">
+<div class="card">
+<h2>Day 1</h2>
+<video controls onplay="pauseMusic()">
+    <source src="videos/day1p1.mp4" type="video/mp4">
+</video>
+<video controls onplay="pauseMusic()">
+    <source src="videos/day1p2.mp4" type="video/mp4">
+</video>
+<video controls onplay="pauseMusic()">
+    <source src="videos/day1p3.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+<div id="d2" class="page">
+<div class="card">
+<h2>Day 2</h2>
+<video controls onplay="pauseMusic()">
+    <source src="videos/day2.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+<div id="d3" class="page">
+<div class="card">
+<h2>Day 3</h2>
+<video controls onplay="pauseMusic()">
+    <source src="videos/day3p1.mp4" type="video/mp4">
+</video>
+<video controls onplay="pauseMusic()">
+    <source src="videos/day3p2.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+<div id="d4" class="page">
+<div class="card">
+<h2>Day 4</h2>
+<video controls onplay="pauseMusic()">
+    <source src="videos/day4.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+<div id="d5" class="page">
+<div class="card">
+<h2>Day 5</h2>
+<video controls onplay="pauseMusic()">
+    <source src="videos/day5.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+<div id="sp" class="page">
+<div class="card">
+<h2>Special 💀</h2>
+<video controls onplay="pauseMusic()">
+    <source src="videos/special.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+</body>
+</html>
